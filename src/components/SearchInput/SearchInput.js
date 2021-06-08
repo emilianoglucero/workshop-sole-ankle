@@ -1,14 +1,14 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from "react";
+import styled from "styled-components/macro";
 
-import { COLORS } from '../../constants';
-import VisuallyHidden from '../VisuallyHidden';
-import Icon from '../Icon';
+import { COLORS } from "../../constants";
+import VisuallyHidden from "../VisuallyHidden";
+import Icon from "../Icon";
 
 const SearchInput = ({ label, ...delegated }) => {
   return (
     <Label>
-      <VisuallyHidden>Search</VisuallyHidden>
+      {/* <VisuallyHidden>Search</VisuallyHidden> */}
       <Input {...delegated} placeholder="Search…" />
       <SearchIcon id="search" strokeWidth={1} size={16} />
     </Label>
@@ -17,6 +17,8 @@ const SearchInput = ({ label, ...delegated }) => {
 
 const Label = styled.label`
   position: relative;
+  display: flex;
+  flex-direction: row-reverse;
 `;
 
 const Input = styled.input`
